@@ -13,7 +13,7 @@ class HolaMundo{
 
     // aqui definimos los comportamientos(metodos)
     public static void main(String[] args) {
-        System.out.println("Hola Mundo mundial");
+        System.out.println("Hola Mundo");
 
     }
 }
