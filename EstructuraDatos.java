@@ -21,12 +21,13 @@ import java.util.Scanner;
 public class EstructuraDatos {
     public static void main(String[] args) {
 
+        do {
         int opcion;
         char letrarepetir;
 
         Scanner entrada = new Scanner(System.in);
         
-        do { 
+        
             
         
         System.out.println("Por favor eliga un opcion");
@@ -56,13 +57,14 @@ public class EstructuraDatos {
                 System.out.println("Ingrese un numero positvio entero que dece convertir a binario:");
                 int numero;
                 String binario;
+                binario = "";
 
                 numero = entrada.nextInt();
 
                 if (numero > 0){
                     while(numero > 0){
                         if (numero%2 == 0){
-                            binario = "0" + binario
+                            binario = "0" + binario;
                         }else {
                             binario = "1" + binario;
                         }
@@ -79,12 +81,29 @@ public class EstructuraDatos {
             case 3:
 
                 break;
+            case 4:
+
+                break;
+            case 5:
+                System.out.println("Bienvenid@ a esta hermosa tiendita");
+                System.out.println("Por favor ingrese cuantos elementos va a comprar");
+                int cantidadproductos = 0;
+                cantidadproductos = entrada.nextInt();
+                if (cantidadproductos > 0){
+                    for(int i = 1; i <= cantidadproductos; i++){
+                        System.out.println("Ingresa el nombre del producto");
+                        String nombreproducto;
+                        nombreproducto = entrada.next();
+                    }
+                }
+
+                    break;
             default:
                 throw new AssertionError();
         }
 
         System.out.println("Deseas repetir el programa? \n Escribe s o S para repetir:");
-        letrarepetir = entrada.next().charAt(index: 0);
+        letrarepetir = entrada.next().charAt( 0);
         }while 
         (letrarepetir == "s" || letrarepetir == "S");
 
