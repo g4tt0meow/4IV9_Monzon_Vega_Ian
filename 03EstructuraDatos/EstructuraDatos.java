@@ -31,7 +31,7 @@ public class EstructuraDatos {
         
         System.out.println("Por favor eliga un opcion");
     
-        System.out.println("1.- ");
+        System.out.println("1.- Bono de Edad ");
         System.out.println("2.- ");
         System.out.println("3.- ");
         System.out.println("4.- ");
@@ -56,13 +56,30 @@ public class EstructuraDatos {
                     System.out.println("\n Menores de 3 entran gratis!");
                     System.out.println("Ingrese su edad: ");
                     int edad;
-                    edad = entrada.nextInt();
 
-                    if (edad < 0){
+                    try {
+                        edad = entrada.nextInt();
+                    } catch (Exception e) {
+                        System.out.println("Ingrese valores validos (solo numeros, y positivos!)");
+                        entrada.nextLine();
+                        break;
+                    }
+
+                    if (edad <= 0){
                         System.out.println("Ingrese una edad valida");
                     } else if(edad > 0 && edad < 3 ){
-                        System.out.println("Entras gratis!");
-                    } else if(edad > 3 && edad < 8)
+                        System.out.println("Entras gratis! \n descuento del 100%!!");
+                    } else if(edad > 3 && edad < 7){
+                        System.out.println("Seran 35$ \n descuento del 30%");
+                    } else if(edad > 8 && edad < 15){
+                        System.out.println("Seran 40$ \n descuento del 20%");
+                    } else if(edad > 16 && edad < 100){
+                        System.out.println("Seran 50$");
+                    } else if(edad > 100){
+                        System.out.println("Que viej@!! \n Digo... Seran 50$");
+                    } else{
+                        System.out.println("Ingrese un valor valido (Nada de simbolos especiales, solo números, positivos y diferentes de cero!");
+                    }
 
                 break;
             case 2:
