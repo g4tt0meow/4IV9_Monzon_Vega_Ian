@@ -50,7 +50,14 @@ public class EstructuraDatos {
 
         switch (opcion) {
             case 1 :
-                
+                    System.out.println("Bienvenido a batizlandia, lugar de dolor y sufrimiento eterno!");
+                    System.out.println("----------| Precios de los boletos |---------");
+                    System.out.println("3-7 años: 35$ por persona \n 8-14 años: 40$ por persona \n 15 años en adelante: 50$ persona");
+                    System.out.println("\n Menores de 3 entran gratis!");
+                    
+                    int edad;
+                    edad = entrada.nextInt();
+
                 break;
             case 2:
                 System.out.println("Ingrese un numero positvio entero que dece convertir a binario:");
