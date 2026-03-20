@@ -54,9 +54,15 @@ public class EstructuraDatos {
                     System.out.println("----------| Precios de los boletos |---------");
                     System.out.println("3-7 años: 35$ por persona \n 8-14 años: 40$ por persona \n 15 años en adelante: 50$ persona");
                     System.out.println("\n Menores de 3 entran gratis!");
-                    
+                    System.out.println("Ingrese su edad: ");
                     int edad;
                     edad = entrada.nextInt();
+
+                    if (edad < 0){
+                        System.out.println("Ingrese una edad valida");
+                    } else if(edad > 0 && edad < 3 ){
+                        System.out.println("Entras gratis!");
+                    } else if(edad > 3 && edad < 8)
 
                 break;
             case 2:
