@@ -1,7 +1,7 @@
-public class Principal {
+public class CalPrincipal {
 
     public static void main(String[] args) {
-        Ejercicios ejecucion = new Ejercicios();
+        Calculadora ejecucion = new Calculadora();
         ejecucion.menu();
     }
 } 
