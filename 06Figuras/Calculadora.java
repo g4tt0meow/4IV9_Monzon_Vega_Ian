@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Calculadora {
@@ -14,12 +15,14 @@ public class Calculadora {
 
             System.out.println("Calculadora geometrica");
             System.out.println("Bienvenido a la calculadora de areas de figuras geometricas");
+            System.out.println("______________________");
             System.out.println("|1.- Cuadrado        |");
             System.out.println("|2.- Rectangulo      |");
             System.out.println("|3.- Triangulo       |");
             System.out.println("|4.- Circulo         |");
             System.out.println("|5.- Trapecio        |");
-            System.out.println("|Elige una opcion:   |");
+            System.out.println("|____________________|");
+            System.out.println(" Elige una opcion: ");
 
             int opcion;
 
@@ -30,10 +33,10 @@ public class Calculadora {
                     Cuadrado();
                     break;
                 case 2:
-                        Rectangulo();
+                    Rectangulo();
                     break;
                 case 3:
-
+                    Triangulo();
                     break;
 
                 default:
@@ -41,12 +44,16 @@ public class Calculadora {
             }
             System.out.println("Quiere usar otra opcion? (s/n)");
             respuesta = sc.next().charAt(0);
-        } while (respuesta == 's' || respuesta == 'S');
+        } while (respuesta == 's'|| respuesta == 'S'  
+        );
 
     }
 
+    
+
     public void Cuadrado() {
         do {
+            System.out.println("Calcular Cuadrado");
             System.out.println("Ingresa el valor de los lados de tu cuadrado: ");
             lado = sc.nextDouble();
             System.out.println("Area: " + lado * lado);
@@ -59,11 +66,52 @@ public class Calculadora {
     }
 
     public void Rectangulo() {
-        do { 
+        do {
+            System.out.println("Calcular Rectangulo");
             System.out.println("Ingresa el alto de tu rectangulo: ");
             alto = sc.nextDouble();
+            System.out.println("Ingresa el ancho: ");
+            ancho = sc.nextDouble();
+            System.out.println("Area: " + alto * ancho);
+            System.out.println("Perimetro: " + (2 * alto + 2 * ancho));
 
+            System.out.println("Quiere repetir? (s/n)");
+            respuesta = sc.next().charAt(0);
+        } while (respuesta == 's' || respuesta == 'S');
+    }
 
-        } while (true);
+    public void Triangulo() {
+        do {
+            System.out.println("Calcular Triangulo");
+            System.out.println("Quieres calcular el area o perimetro?");
+            System.out.println("_______________");
+            System.out.println("|1.-Area      |");
+            System.out.println("|2.-Perimetro |");
+            System.out.println("|_____________|");
+            
+            int opcion;
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Ingrese la base de su triangulo: ");
+                    ancho = sc.nextDouble();
+                    System.out.println("Ingrese la altura: ");
+                    alto = sc.nextDouble();
+                    System.out.println("Area: " + (ancho * alto) / 2);
+                    break;
+                case 2:
+                    System.out.println("Solo para triangulos isosceles*");
+                    System.out.println("Ingrese el valor de los lados del triangulos isosceles: ");
+                    lado = sc.nextDouble();
+                    System.out.println("Perimetro: " + (3 * lado));
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+            System.out.println("Quiere repetir? (s/n)");
+            respuesta = sc.next().charAt(0);
+        } while (respuesta == 's' || respuesta == 'S');
+
     }
 }
