@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package herenciaspersona;
+package herenciapersona;
 
 /**
  *
- * @author ianmo
+ * @author demon
  */
-public class HerenciasPersona {
+public class HerenciaPersona {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        DAOEstudiante objmenu = new DAOEstudiante();
+        objmenu.menu();
     }
 }
