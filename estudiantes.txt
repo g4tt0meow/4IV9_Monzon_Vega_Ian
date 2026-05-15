@@ -1,0 +1,10 @@
+nombre=Ian Adolfo Monzon Vega
+edad=16
+genero=M
+boleta=2025090629
+
+nombre=Jose Elias Caleb Vertiz Angeles
+edad=16
+genero=M
+boleta=2025090629
+
