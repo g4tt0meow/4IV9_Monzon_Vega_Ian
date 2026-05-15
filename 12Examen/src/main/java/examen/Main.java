@@ -16,8 +16,8 @@ public class Main {
 
             opcion = Integer.parseInt(JOptionPane.showInputDialog(
                     "MENU PRINCIPAL\n\n"
-                    + "1.- CRUD Estudiantes\n"
-                    + "2.- CRUD Profesores\n"
+                    + "1.- Estudiantes\n"
+                    + "2.- Profesores\n"
                     + "3.- Salir"));
 
             switch(opcion){
